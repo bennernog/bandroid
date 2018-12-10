@@ -31,5 +31,10 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation project(':dialogs')
     implementation project(':javatools')
-    implementation project(':android_tools')
+    implementation project(':androidtools')
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.squareup.okhttp:okhttp:2.4.0'
+    implementation 'com.squareup.okhttp:okhttp-urlconnection:2.2.0'
+    implementation project(':batadase')
+    implementation project(':jsontools')
 }
