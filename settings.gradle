@@ -1,1 +1,1 @@
-include ':app', ':javatools'
+include ':app', ':javatools', ':dialogs', ':android_tools'

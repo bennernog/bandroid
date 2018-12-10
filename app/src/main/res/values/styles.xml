@@ -7,5 +7,30 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <!--<item name="android:windowBackground">@drawable/splash_screen</item>-->
+        <item name="android:background">@drawable/splash_screen</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="AppTheme.TextAppearance">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.TextAppearance.Small" parent="AppTheme.TextAppearance">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="AppTheme.TextAppearance.Medium" parent="AppTheme.TextAppearance">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="AppTheme.TextAppearance.Large" parent="AppTheme.TextAppearance">
+    <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
 
 </resources>
