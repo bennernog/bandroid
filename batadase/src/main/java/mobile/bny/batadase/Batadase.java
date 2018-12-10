@@ -363,16 +363,30 @@ public abstract class Batadase<T> extends SQLiteOpenHelper {
     /**
      * This methods gets all the object from all the tables associated with this database
      *
+     * @param db SQLiteDatabase: the database used to read the table, usually this.getReadableDatabase()
+     * @return ArrayList<T>: a list of objects of the type associated with this database
+     */
+    public final ArrayList<T> getAll(SQLiteDatabase db){
+
+
+        ArrayList<T> array_list =  new ArrayList<>();
+
+        for (BatadaseTable table : getTables())
+            array_list.addAll(getAllFrom(db, table.getName()));
+
+        return array_list;
+    }
+
+    /**
+     * This methods gets all the object from all the tables associated with this database
+     *
      * @return ArrayList<T>: a list of objects of the type associated with this database
      */
     public final ArrayList<T> getAll(){
 
         SQLiteDatabase db = getReadableDatabase();
 
-        ArrayList<T> array_list =  new ArrayList<>();
-
-        for (BatadaseTable table : getTables())
-            array_list.addAll(getAllFrom(db, table.getName()));
+        ArrayList<T> array_list =  getAll(db);
 
         db.close();
 
@@ -389,9 +403,27 @@ public abstract class Batadase<T> extends SQLiteOpenHelper {
      *
      * @return int: the number of rows
      */
-    protected static int getCount(SQLiteDatabase db, String tableName){
+    public static int getCount(SQLiteDatabase db, String tableName){
 
         return (int) DatabaseUtils.queryNumEntries(db,tableName);
+    }
+
+    /**
+     * Method if you need to know how many rows are in all tables
+     *
+     * @param db SQLiteDatabase: the database used to read the table, usually this.getReadableDatabase()
+     * @return int: the total number of rows
+     */
+
+    public final int getCount(SQLiteDatabase db) {
+        if(getTables() == null || getTables().length == 0)
+            return 0;
+
+        int count = 0;
+        for(BatadaseTable table : getTables())
+            count += getCount(db,table.getName());
+
+        return count;
     }
 
     /**
@@ -405,9 +437,7 @@ public abstract class Batadase<T> extends SQLiteOpenHelper {
             return 0;
 
         SQLiteDatabase db = this.getReadableDatabase();
-        int count = 0;
-        for(BatadaseTable table : getTables())
-            count += getCount(db,table.getName());
+        int count = getCount(db);
 
         db.close();
         return count;

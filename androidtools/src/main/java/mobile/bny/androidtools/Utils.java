@@ -1,4 +1,4 @@
-package mobile.bny.android_tools;
+package mobile.bny.androidtools;
 
 import android.app.Activity;
 import android.content.Context;

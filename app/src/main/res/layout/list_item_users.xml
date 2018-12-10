@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:weightSum="5"
+    android:padding="@dimen/user_list_item_padding">
+
+    <mobile.bny.bandroidapp.views.ProgressImageView
+        android:id="@+id/piv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:gravity="center"
+        android:layout_weight="4"
+        android:background="@android:color/transparent"
+        app:progressImageViewStyle="Small" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="24dp">
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FIRST LAST"
+            android:textAppearance="@style/AppTheme.TextAppearance.Large" />
+
+        <TextView
+            android:id="@+id/tv_user_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CIS"
+            android:textAppearance="@style/AppTheme.TextAppearance.Small" />
+
+        <TextView
+            android:id="@+id/tv_user_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="name@domain.org"
+            android:textAppearance="@style/AppTheme.TextAppearance.Medium" />
+
+    </LinearLayout>
+</LinearLayout>

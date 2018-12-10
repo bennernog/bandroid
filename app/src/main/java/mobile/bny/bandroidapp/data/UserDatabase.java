@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 
-import mobile.bny.android_tools.Blogger;
+import mobile.bny.androidtools.Blogger;
 import mobile.bny.batadase.Batadase;
 import mobile.bny.bandroidapp.data.User.Keys;
 import mobile.bny.batadase.BatadaseColumn;
@@ -19,7 +19,7 @@ import static mobile.bny.batadase.BatadaseColumn.DataType;
 public class UserDatabase extends Batadase<User> {
 
     private static final String DATABASE_NAME = "MyUserDB.db";
-    private static final String DATABASE_TABLE_NAME = "data_table";
+    public static final String DATABASE_TABLE_NAME = "data_table";
     private static final int DATABASE_VERSION = 1;
 
     public UserDatabase(Context context) {

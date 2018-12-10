@@ -31,19 +31,19 @@ public class MarqueeToolbar extends Toolbar {
     //for Title
     @Override
     public void setTitle(CharSequence title) {
+        super.setTitle(title);
         if (!reflected) {
             reflected = reflectTitle();
         }
-        super.setTitle(title);
         selectTitle();
     }
 
     @Override
     public void setTitle(int resId) {
+        super.setTitle(resId);
         if (!reflected) {
             reflected = reflectTitle();
         }
-        super.setTitle(resId);
         selectTitle();
     }
 
@@ -77,20 +77,20 @@ public class MarqueeToolbar extends Toolbar {
     @Override
 
     public void setSubtitle(CharSequence subTitle) {
+        super.setSubtitle(subTitle);
         if (!reflectedSub) {
             reflectedSub = reflectSubTitle();
         }
-        super.setSubtitle(subTitle);
         selectSubtitle();
     }
 
 
     @Override
     public void setSubtitle(int resId) {
+        super.setSubtitle(resId);
         if (!reflected) {
             reflectedSub = reflectSubTitle();
         }
-        super.setSubtitle(resId);
         selectSubtitle();
     }
 

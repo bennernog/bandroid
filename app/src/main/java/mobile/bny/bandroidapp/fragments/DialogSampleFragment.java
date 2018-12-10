@@ -1,4 +1,4 @@
-package mobile.bny.bandroidapp;
+package mobile.bny.bandroidapp.fragments;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -14,7 +14,8 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import mobile.bny.android_tools.Toaster;
+import mobile.bny.androidtools.Toaster;
+import mobile.bny.bandroidapp.R;
 import mobile.bny.bandroidapp.activities.MainActivity;
 import mobile.bny.dialogs.DialogButton;
 import mobile.bny.dialogs.ItemSelectDialog;
@@ -73,8 +74,8 @@ public class DialogSampleFragment extends ListFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getListView().setDivider(ResourcesCompat.getDrawable(getActivity().getResources(), R.drawable.list_divider, null));
-        getListView().setDividerHeight(1);
+//        getListView().setDivider(ResourcesCompat.getDrawable(getActivity().getResources(), R.drawable.list_divider, null));
+//        getListView().setDividerHeight(1);
         getListView().setVerticalScrollBarEnabled(false);
         getListView().setHorizontalScrollBarEnabled(false);
 

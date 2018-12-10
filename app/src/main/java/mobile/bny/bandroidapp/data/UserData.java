@@ -6,7 +6,7 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
-import mobile.bny.android_tools.InternetConnection;
+import mobile.bny.androidtools.InternetConnection;
 import mobile.bny.jsontools.GsheetJsonFetcher;
 import mobile.bny.jsontools.GsheetJsonPoster;
 import mobile.bny.jsontools.JsonDownloadWrapper;
