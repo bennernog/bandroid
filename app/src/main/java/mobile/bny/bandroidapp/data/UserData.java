@@ -6,12 +6,12 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
-import mobile.bny.androidtools.InternetConnection;
-import mobile.bny.jsontools.GsheetJsonFetcher;
-import mobile.bny.jsontools.GsheetJsonPoster;
-import mobile.bny.jsontools.JsonDownloadWrapper;
-import mobile.bny.jsontools.JsonResponse;
-import mobile.bny.jsontools.JsonUtils;
+//import mobile.bny.androidtools.InternetConnection;
+//import mobile.bny.jsontools.GsheetJsonFetcher;
+//import mobile.bny.jsontools.GsheetJsonPoster;
+//import mobile.bny.jsontools.JsonDownloadWrapper;
+//import mobile.bny.jsontools.JsonResponse;
+//import mobile.bny.jsontools.JsonUtils;
 
 
 /**
@@ -39,26 +39,27 @@ public class UserData {
 
     public static UserData DOWNLOAD(){
         Gson gson = new Gson();
-        JsonDownloadWrapper downloadWrapper = GsheetJsonFetcher.getJSONString(sheetId);
-
-        if(downloadWrapper.getResponse() == JsonResponse.SUCCESS) {
-
-            String jsonString = downloadWrapper.getResult();
-            return jsonString != null ? gson.fromJson(jsonString, UserData.class) : null;
-
-        } else return null;
+//        JsonDownloadWrapper downloadWrapper = GsheetJsonFetcher.getJSONString(sheetId);
+//
+//        if(downloadWrapper.getResponse() == JsonResponse.SUCCESS) {
+//
+//            String jsonString = downloadWrapper.getResult();
+//            return jsonString != null ? gson.fromJson(jsonString, UserData.class) : null;
+//
+//        } else
+            return null;
     }
 
-    public static JsonResponse UPLOAD(Context context, ArrayList<User> users){
-
-        if (InternetConnection.isConnected(context)) {
-
-            Gson gson = JsonUtils.getGson(User.class, new User.UserSerializer());
-
-            String jsonString = gson.toJson(users);
-
-            return GsheetJsonPoster.postJSONString(sheetId,sheetName,jsonString);
-
-        } else return JsonResponse.NO_CONNECTION;
-    }
+//    public static JsonResponse UPLOAD(Context context, ArrayList<User> users){
+//
+//        if (InternetConnection.isConnected(context)) {
+//
+//            Gson gson = JsonUtils.getGson(User.class, new User.UserSerializer());
+//
+//            String jsonString = gson.toJson(users);
+//
+//            return GsheetJsonPoster.postJSONString(sheetId,sheetName,jsonString);
+//
+//        } else return JsonResponse.NO_CONNECTION;
+//    }
 }
