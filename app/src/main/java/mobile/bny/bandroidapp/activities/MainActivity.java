@@ -29,7 +29,7 @@ import mobile.bny.bandroidapp.data.UserDatabase;
 import mobile.bny.bandroidapp.fragments.DialogSampleFragment;
 import mobile.bny.bandroidapp.fragments.UserFragment;
 import mobile.bny.dialogs.AsyncTaskDialog;
-//import mobile.bny.jsontools.JsonResponse;
+import mobile.bny.jsontools.JsonResponse;
 import mobile.bny.views.MarqueeToolbar;
 
 public class MainActivity extends AppCompatActivity
@@ -261,18 +261,18 @@ public class MainActivity extends AppCompatActivity
             try {
                 publishProgress(new AsyncProgressUpdate("upload started"));
 
-//                JsonResponse jsonResponse = UserData.UPLOAD(MainActivity.this, userFragment.getUsers());
-//
-//                publishProgress(new AsyncProgressUpdate("uploading"));
-//
-//                if(jsonResponse == JsonResponse.SUCCESS)
-//                    return AsyncResponse.SUCCESS;
-//
-//                else if( jsonResponse == JsonResponse.NO_CONNECTION)
+                JsonResponse jsonResponse = UserData.UPLOAD(MainActivity.this, userFragment.getUsers());
+
+                publishProgress(new AsyncProgressUpdate("uploading"));
+
+                if(jsonResponse == JsonResponse.SUCCESS)
+                    return AsyncResponse.SUCCESS;
+
+                else if( jsonResponse == JsonResponse.NO_CONNECTION)
                     return AsyncResponse.NO_CONNECTION;
 //
-//                else
-//                    return AsyncResponse.FAILURE;
+                else
+                    return AsyncResponse.FAILURE;
 
             } catch (Exception e) {
                 e.printStackTrace();
