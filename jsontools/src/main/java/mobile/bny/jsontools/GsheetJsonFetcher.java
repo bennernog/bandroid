@@ -17,7 +17,7 @@ public class GsheetJsonFetcher {
 
     private static String BASE_URL = "https://script.google.com/macros/s/AKfycbzVr2g80Ohvtar_89Ouam49BIjWWUbsTMWvetI5FofAtFFtOs4RCXDbLzBNSjelcYrt/exec?id=%s";
     public static void setBaseUrl(String baseUrl){
-        BASE_URL = baseurl;
+        BASE_URL = baseUrl;
     }
 
     /**
