@@ -3,7 +3,7 @@
 full library:
   ```
   dependencies {
-    implementation 'com.github.bny-mobile:bandroid:0.1.5'
+    implementation 'com.github.bny-mobile:bandroid:0.1.6'
   }
   ```
 
@@ -39,7 +39,7 @@ bandroid dialogs:
   bandroid jsontools: (Gson)
   ```
   dependencies {
-    implementation 'com.github.bny-mobile.bandroid:jsontools:0.1.5'
+    implementation 'com.github.bny-mobile.bandroid:jsontools:0.1.6'
   }
   ```
   
