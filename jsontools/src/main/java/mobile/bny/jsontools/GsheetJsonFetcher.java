@@ -15,7 +15,10 @@ import java.io.IOException;
 
 public class GsheetJsonFetcher {
 
-    private static final String BASE_URL = "https://script.google.com/macros/s/AKfycbwW949EsesMnaVOn8FFwzVgRUR9akju2cvVK-8cTESoqaV5klY/exec?id=%s";
+    private static String BASE_URL = "https://script.google.com/macros/s/AKfycbzVr2g80Ohvtar_89Ouam49BIjWWUbsTMWvetI5FofAtFFtOs4RCXDbLzBNSjelcYrt/exec?id=%s";
+    public static void setBaseUrl(String baseUrl){
+        BASE_URL = baseurl;
+    }
 
     /**
      * This method fetches your published Google sheet as a JSON-string.
